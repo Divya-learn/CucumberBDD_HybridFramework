@@ -1,0 +1,81 @@
+12:21:38.947 [main] DEBUG - Browser got maximized
+12:21:41.433 [main] DEBUG - Application is opened
+12:21:42.200 [main] DEBUG - clicked on MyAccount option
+12:21:43.404 [main] DEBUG - clicked on login option
+12:21:43.796 [main] DEBUG - entered emailaddress
+12:21:43.972 [main] DEBUG - entered password
+12:21:44.145 [main] DEBUG - clicked on loginbutton
+12:21:45.134 [main] INFO  - login successfully
+12:21:45.933 [main] DEBUG - Browser  got closed
+12:21:48.360 [main] DEBUG - Browser got maximized
+12:21:49.911 [main] DEBUG - Application is opened
+12:21:50.102 [main] DEBUG - clicked on MyAccount option
+12:21:51.177 [main] DEBUG - clicked on login option
+12:21:51.437 [main] DEBUG - entered emailaddress
+12:21:51.585 [main] DEBUG - entered password
+12:21:51.726 [main] DEBUG - clicked on loginbutton
+12:21:52.075 [main] INFO  - login unsuccessfull
+12:21:52.520 [main] DEBUG - Browser  got closed
+12:21:54.628 [main] DEBUG - Browser got maximized
+12:21:56.019 [main] DEBUG - Application is opened
+12:21:56.215 [main] DEBUG - clicked on MyAccount option
+12:21:57.186 [main] DEBUG - clicked on login option
+12:21:57.483 [main] DEBUG - entered emailaddress
+12:21:57.603 [main] DEBUG - entered password
+12:21:57.742 [main] DEBUG - clicked on loginbutton
+12:21:57.933 [main] INFO  - login unsuccessfull
+12:21:58.383 [main] DEBUG - Browser  got closed
+12:22:00.416 [main] DEBUG - Browser got maximized
+12:22:01.668 [main] DEBUG - Application is opened
+12:22:02.117 [main] DEBUG - clicked on MyAccount option
+12:22:03.643 [main] DEBUG - clicked on login option
+12:22:03.910 [main] DEBUG - entered emailaddress
+12:22:04.028 [main] DEBUG - entered password
+12:22:04.139 [main] DEBUG - clicked on loginbutton
+12:22:04.344 [main] INFO  - login unsuccessfull
+12:22:04.839 [main] DEBUG - Browser  got closed
+12:22:06.886 [main] DEBUG - Browser got maximized
+12:22:08.267 [main] DEBUG - Application is opened
+12:22:09.698 [main] DEBUG - entered firstname
+12:22:09.839 [main] DEBUG - entered lastname
+12:22:10.134 [main] DEBUG - entered emailaddress
+12:22:10.301 [main] DEBUG - entered password
+12:22:10.737 [main] DEBUG - clicked on subscribe
+12:22:11.094 [main] DEBUG - clicks on privacy policy
+12:22:12.597 [main] INFO  - Account created successfully
+12:22:12.981 [main] DEBUG - Browser  got closed
+12:22:15.148 [main] DEBUG - Browser got maximized
+12:22:16.451 [main] DEBUG - Application is opened
+12:22:16.695 [main] DEBUG - entered productname
+12:22:18.939 [main] DEBUG - clicked search icon
+12:22:19.044 [main] INFO  - Navigated to search page
+12:22:19.501 [main] DEBUG - clicked on add to cart icon
+12:22:19.799 [main] INFO  - product added successfully
+12:22:20.272 [main] DEBUG - Browser  got closed
+12:22:22.853 [main] DEBUG - Browser got maximized
+12:22:24.388 [main] DEBUG - Application is opened
+12:22:24.626 [main] DEBUG - entered productname
+12:22:26.462 [main] DEBUG - clicked search icon
+12:22:26.552 [main] INFO  - Navigated to search page
+12:22:27.034 [main] DEBUG - clicked on add to cart icon
+12:22:27.273 [main] INFO  - product added successfully
+12:22:27.648 [main] DEBUG - Browser  got closed
+12:22:29.575 [main] DEBUG - Browser got maximized
+12:22:30.464 [main] DEBUG - Application is opened
+12:22:31.203 [main] DEBUG - entered productname
+12:22:33.033 [main] DEBUG - clicked search icon
+12:22:33.145 [main] INFO  - Navigated to search page
+12:22:33.576 [main] DEBUG - clicked on add to cart icon
+12:22:33.768 [main] INFO  - product added successfully
+12:22:34.462 [main] DEBUG - Browser  got closed
+12:22:36.696 [main] DEBUG - Browser got maximized
+12:22:38.072 [main] DEBUG - Application is opened
+12:22:41.867 [main] INFO  - user navigated to shopping cart page
+12:22:43.136 [main] DEBUG - clicked on checkoutbutton
+12:22:43.221 [main] INFO  - Navigated to checkout page
+12:22:45.568 [main] DEBUG - entered valid shipping information
+12:22:46.786 [main] DEBUG - choosed shipping method
+12:22:48.067 [main] DEBUG - choosed payment method
+12:22:48.654 [main] DEBUG - clicked confirm order
+12:22:49.544 [main] INFO  - order placed successfully
+12:22:49.943 [main] DEBUG - Browser  got closed

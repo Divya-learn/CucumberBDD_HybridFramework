@@ -13,7 +13,7 @@ Scenario Outline: Search with valid product name
 	| productname  | 
 	| iMac	       |
 	| HTC Touch HD |
-	| iPhone	     | 
+	| iPhone       | 
 	
 	
 	

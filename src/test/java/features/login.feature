@@ -18,7 +18,7 @@ Scenario Outline: Login with invalid credentials
 	 Then User should not login successfully
 	 
 	 Examples:			
-	| email					  | password |
-	| divya@txcct.com | 123ad	   |
+	| email		  | password |
+	| divya@txcct.com | 123ad    |
 	| ravi@txcct.com  | 1234     |
-	| valar@txcct.com | 123ec	   | 
+	| valar@txcct.com | 123ec    | 

@@ -2,22 +2,20 @@ package stepdefinitions;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-import Hooks.DriverInstance;
-import PageObjects.CheckoutPage;
-import PageObjects.LandingPage;
-import PageObjects.SearchPage;
-import PageObjects.ShoppingcartPage;
-import PageObjects.SuccessPage;
+import factory.DriverFactory;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import jdk.internal.org.jline.utils.Log;
+import pages.CheckoutPage;
+import pages.LandingPage;
+import pages.SearchPage;
+import pages.ShoppingcartPage;
+import pages.SuccessPage;
 
-public class viewcheckoutordersteps extends DriverInstance {
+public class viewcheckoutordersteps extends DriverFactory {
 	
 	public LandingPage LanPage;
 	public ShoppingcartPage Shopcart;
@@ -31,42 +29,39 @@ public class viewcheckoutordersteps extends DriverInstance {
 	{
 		logs = LogManager.getLogger(viewcheckoutordersteps.class.getName());
 		LanPage = new LandingPage(driver);
-		LanPage.searchfield().sendKeys(productname);
+		LanPage.searchfield(productname);
 		
 	}
 	
 	@And("User clicks on search link")
 	public void User_clicks_on_search_link() {
-		LanPage.searchicon().click();
+		SPage =LanPage.searchicon();
 	}
 	
 	@And("User clicks on Add to cart link")
     public void User_clicks_on_Add_to_cart_link() {
-		SPage= new SearchPage(driver);
-    	SPage.Addtocarticon().click();
+    	SPage.Addtocarticon();
     }
 	
 	
 	@When("User clicks on shopping cart link")
 	public void User_clicks_on_shopping_cart_link() {
 		
-		SPage.shoppingcartsuccesslink().click();
+		Shopcart =SPage.shoppingcartsuccesslink();
 		
 	}
 	
 	@Then("User navigates to shopping cart page")
 	public void User_navigates_to_shopping_cart_page() {
 		
-		Shopcart = new ShoppingcartPage(driver);
-		String Shoptext =Shopcart.Shoppingcarttext().getText();
-		Assert.assertEquals("Shopping Cart", Shoptext);
+		Assert.assertEquals("Shopping Cart", Shopcart.Shoppingcart());
 		logs.info("user navigated to shopping cart page");
 	}
 
 	@And("User clicks on checkout button")
 	public void User_clicks_on_checkout_button() {
 		
-		Shopcart.checkoutbutton();
+		CheckPage =Shopcart.checkoutbutton();
 		logs.debug("clicked on checkoutbutton");
 		
 	}
@@ -74,16 +69,14 @@ public class viewcheckoutordersteps extends DriverInstance {
 	@Then("User navigates to checkout page")
 	public void User_navigates_to_checkout_page() {
 		
-		CheckPage= new CheckoutPage(driver);
-		String checktext = CheckPage.checkoutverify().getText();
-		Assert.assertEquals("Checkout",checktext);
+		Assert.assertEquals("Checkout",CheckPage.checkoutverify());
 		logs.info("Navigated to checkout page");
 	}
 	
 	@And("User provides the valid shipping information")
 	public void User_provides_the_valid_shipping_information() {
 		
-		CheckPage.guestcheckout().click();
+		CheckPage.guestcheckout();
 		CheckPage.Firstname().sendKeys("John");
 		CheckPage.Lastname().sendKeys("T");
 		CheckPage.emailaddressinguest().sendKeys("JohnT@John.com");
@@ -95,11 +88,9 @@ public class viewcheckoutordersteps extends DriverInstance {
 		Select country = new Select(CheckPage.country());
 		
 		country.selectByVisibleText("India");
-		
 
 		Select region = new Select(CheckPage.region());
 		region.selectByIndex(2);
-		
 		CheckPage.continuebutton();
 		logs.debug("entered valid shipping information");
 	}
@@ -124,7 +115,7 @@ public class viewcheckoutordersteps extends DriverInstance {
 	
 	@Then("User clicks on confirm order")
 	public void User_clicks_on_confirm_order() {
-		CheckPage.confirmorder();
+		Spage = CheckPage.confirmorder();
 		logs.debug("clicked confirm order");
 	
 	}
@@ -132,9 +123,7 @@ public class viewcheckoutordersteps extends DriverInstance {
 	@And("User should successfully placed the order")
 	public void User_should_successfully_placed_the_order() {
 		
-		Spage = new SuccessPage(driver);
-		String ordersuccesstext = Spage.ordersuccess().getText();
-		Assert.assertEquals("Your order has been placed!",ordersuccesstext);
+		Assert.assertEquals("Your order has been placed!",Spage.ordersuccess());
 		logs.info("order placed successfully");
 		
 	}

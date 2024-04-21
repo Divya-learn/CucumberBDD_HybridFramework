@@ -6,16 +6,15 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 
-import Hooks.DriverInstance;
-import PageObjects.AccountsuccessPage;
-import PageObjects.LandingPage;
-import PageObjects.RegisterPage;
+import factory.DriverFactory;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.AccountsuccessPage;
+import pages.LandingPage;
+import pages.RegisterPage;
 
-public class registersteps extends DriverInstance{
+public class registersteps extends DriverFactory{
 	
-
 	LandingPage LanPage;
 	RegisterPage RPage;
 	AccountsuccessPage ASPage;
@@ -26,42 +25,40 @@ public class registersteps extends DriverInstance{
 	public void User_clicks_on_My_Account_dropdown_menu() {
 		logs = LogManager.getLogger(registersteps.class.getName());
 		LanPage = new LandingPage(driver);
-		LanPage.MyAccount().click();
+		LanPage.MyAccount();
 
-		
-	    
-	}
+		}
 
 	@Then("User clicks on Register link")
 	public void User_clicks_on_Register_link() {
-		LanPage.Register().click();
+		RPage = LanPage.Register();
 	    
 	}
 
 	@Then("User enters First name as {string}")
 	public void User_enters_First_name_as(String Firstname) {
-		RPage = new RegisterPage(driver);
-		RPage.Firstname().sendKeys(Firstname);
+
+		RPage.Firstname(Firstname);
 		logs.debug("entered firstname");
 	    
 	}
 
 	@Then("User enters Last name as {string}")
 	public void User_enters_Last_name_as(String Lastname) {
-		RPage.Lastname().sendKeys(Lastname);
+		RPage.Lastname(Lastname);
 		logs.debug("entered lastname");
 	}
 
 	@Then("User enters valid email as")
 	public void User_enters_valid_email_as() {
-		RPage.email().sendKeys(emailgenerate());
+		RPage.email(emailgenerate());
 		logs.debug("entered emailaddress");
 	}
 
 	@Then("User enters valid password as {string}")
 	public void User_enters_valid_password_as(String password) {
 		
-		RPage.password().sendKeys(password);
+		RPage.password(password);
 		logs.debug("entered password");
 		
 	}
@@ -82,17 +79,15 @@ public class registersteps extends DriverInstance{
 
 	@When("User on continue button")
 	public void User_on_continue_button() {
-		RPage.continuebutton();
+		ASPage = RPage.continuebutton();
 		
 	    
 	}
 
 	@Then("User should successfully register")
 	public void user_should_successfully_register() {
-		
-		ASPage = new AccountsuccessPage(driver);
-		String successmessage = ASPage.successfullmessage().getText();
-		Assert.assertEquals(successmessage,"Your Account Has Been Created!");
+			
+		Assert.assertEquals(ASPage.successfullmessage(),"Your Account Has Been Created!");
 	    logs.info("Account created successfully");
 	}
 
@@ -103,6 +98,8 @@ public class registersteps extends DriverInstance{
 		//haiFri_Apr_07_14_05_45_UTC_2024@gmail.com
 		
 	}
+	
+	
 	
 }
 

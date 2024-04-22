@@ -1,6 +1,4 @@
 *.java linguist-detectable=true
 *.html linguist-detectable=true
-*.css linguist-detectable=true
-*.feature linguist-detectable=true
-*.xml linguist-detectable=true
+
 

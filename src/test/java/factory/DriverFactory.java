@@ -9,6 +9,4 @@ public class DriverFactory {
 	
 	public static WebDriver driver;
 	
-	
-
-}
+	}

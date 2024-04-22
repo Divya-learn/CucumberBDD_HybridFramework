@@ -2,5 +2,5 @@
 *.html linguist-detectable=false
 *.css linguist-detectable=false
 *.feature linguist-detectable=true
-
-
+*.js linguist-detectable=false
+*.xml inguist-detectable=true

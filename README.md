@@ -30,7 +30,7 @@ Before running the tests,
 - Clone the repository using "git clone "
 - Run "mvn clean test"
 
-## Added a execution video and Generated Reports. See here ![CucumberReport](https://github.com/Divya-learn/CucumberBDD_HybridFramework/tree/main/CucumberPdfReport/PdfReport)
+### Added a execution video and Generated Reports. See here [CucumberReport](https://github.com/Divya-learn/CucumberBDD_HybridFramework/tree/main/CucumberPdfReport/PdfReport)
 
 ## Extent Report:
 ![extentreport](https://github.com/Divya-learn/CucumberBDD_HybridFramework/assets/154688466/57f235c5-52e0-4c25-8557-a12e516a06de)

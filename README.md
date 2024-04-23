@@ -5,9 +5,8 @@ This project is a test automation framework utilizing the **Cucumber BDD** appro
 - **Project Setup** : *Apache Maven*
 - **BDD Tool**      : *Cucumber*
 - **Automation Tool** : *Selenium WebDriver*
-- **Testing framework** : *TestNG*
 - **Data-driven Testing Framework** : *Scenario Outline* (a feature of Cucumber)
-- **Object Repository Design Pattern**: *Page Object Model (POM), Page Factory*
+- **Object Repository Design Pattern**: *Page Factory*
 - **Test Execution Report** : *Extent Report, Cucumber Report*
 - **Logging Framwork** :  *Log4j2*
 - **Passing parameter to scenarios** : *Parameterization*
